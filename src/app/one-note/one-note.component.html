@@ -1,0 +1,21 @@
+
+<div id="notesflex">
+  <mat-card class="example-card" id="displaydiv">
+       <h4>Note ID:{{myNote?.id}}</h4>
+      <h4>{{myNote?.title}}</h4>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    <mat-card-content>
+      <p>{{myNote?.content}}</p>
+      <!-- <p><a routerLink="../editnote/{{myNote?.id}}">Edit details</a></p> -->
+    </mat-card-content>
+
+  </mat-card>
+  </div>
+  <div id="notesflex">
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+      <button mat-button type="submit">DELETE</button>
+      <!-- <button mat-button type="submit"(click)="detelenode(item.id)">Delete</button> -->
+    </mat-card-actions>
+  </div>

@@ -1,0 +1,29 @@
+<!-- <div id="addingnotediv">
+  <div>
+    <p id="newnotesTitle">Add New Notes</p>
+    <section>
+      <h5>Title : </h5>
+      <input class="A" id="notesTitle" type="text" placeholder="title of note" [(ngModel)]="NotesArray.title" >
+      <h5>Content : </h5>
+      <textarea id="textArea1" type="text"  cols="30" rows="5" placeholder="write down content here" [(ngModel)]="NotesArray.content"></textarea>
+      <button type="submit" (click)="addNewNotes()" >add notes</button>
+    </section>
+  </div>
+</div> -->
+
+<div id="addingnotediv">
+  <div>
+    <p id="newnotesTitle">Add New Notes</p> <br>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label >Note Title</mat-label>
+    <input matInput placeholder="Ex. ChatGPT" [(ngModel)]="NotesArray.title" name="title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. This is a AI Tool..." [(ngModel)]="NotesArray.content" name="content"></textarea>
+  </mat-form-field>
+  <button type="submit"  mat-stroked-button color="warn" (click)="addNewNotes()" >Add</button>
+</form>
+</div>
+</div>

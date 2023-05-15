@@ -1,0 +1,27 @@
+#displaydiv{
+  border: 2px solid rgb(120, 120, 250);
+  border-radius: 0.5vw;
+  margin: 1vw;
+  padding: 2vw;
+  width: 20%;
+}
+#notesflex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h4{
+text-align: center;
+font-weight:500;
+}
+
+p{
+  text-align: center;
+}
+mat-card-actions{
+  margin-left:-5%;
+padding-left: 5%;
+  }
+  button:hover{
+   border: black 1px solid;
+  }

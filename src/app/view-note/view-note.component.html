@@ -1,0 +1,28 @@
+<!-- <div id="notesflex" >
+  <div id="displaydiv" *ngFor="let item of displayNotes " >
+    <p id="title">{{item.title}}</p>
+    <p>{{item.content}} </p>
+    <button type="submit"(click)="detelenode(item.id)">delete</button>
+
+  </div>
+</div> -->
+<div id="notesflex">
+<mat-card class="example-card" id="displaydiv" *ngFor="let item of displayNotes ">
+
+    <h4>{{item.title}}</h4>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  <mat-card-content>
+    <p>{{item.content}}</p>
+    <div id="link1">
+    <p><a routerLink="../onenote/{{item.id}}">Get Details</a></p>
+    <p><a routerLink="../editnote/{{item.id}}">Edit details</a></p>
+  </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    <button mat-button type="submit">DELETE</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+<!-- <button mat-button type="submit"(click)="detelenode(item.id)">Delete</button> -->

@@ -1,0 +1,83 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "sample-note 1",
+      "content": "This is a sample note added for testing purpose,to add function to fetch notes"
+    },
+    {
+      "id": 3,
+      "title": "challenge: typescript 01",
+      "content": "to add function to fetch notes,This is a sample note added for testing "
+    },
+    {
+      "id": 4,
+      "title": "refactor practice exercise",
+      "content": "This is a sample note added for testing ,code needs to be well-indented"
+    },
+    {
+      "id": 5,
+      "title": "refactor challenge",
+      "content": "make design responsive and add comments in code,This is a sample note added for testing "
+    },
+    {
+      "title": "Yashwant",
+      "content": "Name : Yashwant Mhamane \nEDU: BE MECHANICAL\nEXP : 4 Years AI tool which used to for all answers,",
+      "id": 6
+    },
+    {
+      "title": "Chat GPT",
+      "content": "AI tool which used to for all answers,make design responsive and add comments in ........",
+      "id": 8
+    },
+    {
+      "title": "CS exam 2023",
+      "content": "Company Secretary\nCompany Law\nTax Law\nAll Laws",
+      "id": 9
+    },
+    {
+      "title": "niit",
+      "content": "niit",
+      "id": 10
+    },
+    {
+      "title": "HIi",
+      "content": "Hllo",
+      "id": 11
+    },
+    {
+      "title": "yash",
+      "content": "yassssssssss",
+      "id": 12
+    },
+    {
+      "title": "yash",
+      "content": "yassssssssss",
+      "id": 13
+    },
+    {
+      "title": "yash",
+      "content": "want",
+      "id": 14
+    },
+    {
+      "title": "ng On It commented",
+      "content": "working ?",
+      "id": 15
+    },
+    {
+      "title": "Testing",
+      "content": "for tyscript addition and checking\n",
+      "id": 16
+    },
+    {
+      "title": "umya",
+      "id": 17
+    },
+    {
+      "title": "prasad",
+      "content": "tablue",
+      "id": 18
+    }
+  ]
+}

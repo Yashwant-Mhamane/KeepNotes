@@ -1,0 +1,161 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Registration Form</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="First name" formControlName="firstName" [(ngModel)]="userDetail.name"/>
+            <mat-error
+              *ngIf="addressForm.controls['firstName'].hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Last name" formControlName="lastName" />
+            <mat-error
+              *ngIf="addressForm.controls['lastName'].hasError('required')" >
+              Last name is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="lastName?.errors?.['minlength']">Last Name should be of min 2 char</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email" formControlName="emailId" [(ngModel)]="userDetail.useremailId" />
+            <mat-error
+              *ngIf="addressForm.controls['emailId'].hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="emailId?.errors?.['email']"
+              >Please Enter Valid Mail ID</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Password" formControlName="pass" id="pass" [(ngModel)]="userDetail.userpass">
+            <mat-error
+              *ngIf="addressForm.controls['pass'].hasError('required')">
+              Password <strong>required</strong> </mat-error>
+            <mat-error *ngIf="pass?.errors?.['pattern']"
+              >Password must contain more than 8 characters, 1 upper case
+              letter, and 1 special character</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Confirm Password" formControlName="cpass" id="cpass"/>
+            <mat-error *ngIf="addressForm.controls['cpass'].hasError('required')">
+              Password <strong>required</strong></mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col"></div>
+
+      <div class="col">
+        <mat-error *ngIf="addressForm?.errors?.['matcherror']"
+        >password and confirm passsword does not matches</mat-error>
+      </div>
+    </div>
+      <div class="row">
+        <div id="radio" class="col">
+          <h4>Gender :-</h4>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Age" formControlName="age" />
+            <mat-error *ngIf="addressForm.controls['age'].hasError('required')">
+              Age is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="age?.errors?.['min']"
+              >Age must be Greater than 18.</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Phone Number" formControlName="phoneNo"/>
+            <mat-error
+              *ngIf="addressForm.controls['phoneNo'].hasError('required')"
+            >
+              Phone Number <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="phoneNo?.errors?.['pattern']"
+              >Phone number should be valid and Numbers Only. For ex-
+              +91-7391981436</mat-error
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Address" formControlName="address"></textarea>
+            <mat-error
+              *ngIf="addressForm.controls['address'].hasError('required')">
+              Address is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="City" formControlName="city" />
+            <mat-error
+              *ngIf="addressForm.controls['city'].hasError('required')"
+            >
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="State" formControlName="state" />
+            <mat-error
+              *ngIf="addressForm.controls['state'].hasError('required')"
+            >
+              State is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput  placeholder="Postal Code" type="text" formControlName="postalCode" />
+            <!-- <mat-hint align="end">{{ postalCode.value.length}} / 5</mat-hint>  #postalCode maxlength="5"-->
+            <mat-error *ngIf="postalCode?.errors?.['required']">Postal code required</mat-error>
+            <mat-error *ngIf="postalCode?.errors?.['minlength']">Minimum 5 digits Required</mat-error>
+            <mat-error *ngIf="postalCode?.errors?.['maxlength']">Maximum 5 digits are allowed.</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <div id="btn">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </mat-card-actions>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" type="reset">Reset</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</form>

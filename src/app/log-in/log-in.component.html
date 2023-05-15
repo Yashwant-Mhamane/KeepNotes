@@ -1,0 +1,19 @@
+
+
+<div id="addingnotediv">
+  <div>
+    <p id="newnotesTitle">User LogIn</p> <br>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label >Email ID</mat-label>
+    <input type="text" matInput placeholder="abc@123.com" [(ngModel)]="username" name="uId">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="text" matInput placeholder="Abcd@1234" [(ngModel)]="userpassword" name="uId">
+  </mat-form-field>
+  <button (click)="userLogin()"  mat-stroked-button color="warn" >Log In</button>
+</form>
+</div>
+</div>

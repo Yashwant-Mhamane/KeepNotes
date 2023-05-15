@@ -1,0 +1,28 @@
+form
+{
+  width: 66%;
+margin: auto;
+padding-bottom: 30px;
+
+}
+
+p
+{
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  color: blue;
+  padding-top: 20px;
+}
+#addingnotediv {
+  border: 2px double blueviolet ;
+  width: 25%;
+  height: max-content;
+  margin: auto;
+
+}
+ #addingnotediv:hover
+{
+ border: 3px solid blueviolet;
+ box-shadow: rgb(78, 78, 120) 5px 5px 5px  ;
+}

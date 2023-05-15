@@ -1,0 +1,22 @@
+/* #header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: navy;
+  height:5vw ;
+  color: aliceblue;
+  font-size: xx-large;
+} */
+.example-spacer {
+  flex: 1 1   auto;
+
+}
+a
+{
+  margin-left: 20px;
+  text-decoration: none;
+}
+mat-toolbar
+{
+  background-color: rgba(11, 65, 63, 0.372);
+}

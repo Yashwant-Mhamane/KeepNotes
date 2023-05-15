@@ -1,0 +1,26 @@
+
+  <mat-toolbar>
+   <!-- <a mat-icon-a class="example-icon" aria-label="Example icon-a with menu icon">
+    <mat-icon>menu</mat-icon>
+  </a> -->
+  <span>Keep Notes</span>
+  <span class="example-spacer"></span>
+  <a mat-icon-a class="example-icon favorite-icon" routerLink="viewnote" >View_Note</a>
+  <a mat-icon-a class="example-icon" routerLink="addnotes" >Add_Note</a>
+ <a mat-icon-a class="example-icon" routerLink="register">Register</a>
+ <a
+ mat-icon-a
+ class="example-icon"
+ *ngIf="!ls.isAdminLog"
+ routerLink="login"
+>
+ Login
+</a>
+<button
+   class="example-icon"
+ *ngIf="ls.isAdminLog"
+(click)="logout()"
+>
+ Logout
+</button>
+</mat-toolbar>
